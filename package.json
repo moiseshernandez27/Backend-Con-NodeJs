@@ -2,6 +2,9 @@
   "type": "module",
   "name": "entregable",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.17.5"
+  },
   "description": "",
   "main": "src/main.js",
   "scripts": {
