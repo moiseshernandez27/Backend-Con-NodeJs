@@ -1,0 +1,12 @@
+h1 {
+    color: rgb(78, 78, 184);
+}
+
+label {
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+.jumbotron {
+    min-height: 100vh;
+}
