@@ -1,16 +1,19 @@
 import mongoose from 'mongoose'
 import config from '../config.js'
 import { asPOJO, renameField, removeField } from '../utils/objectUtils.js'
+import dotenv from 'dotenv'
+dotenv.config()
+// await mongoose.connect(process.env.MONGO_URI)
 
-await mongoose.connect('mongodb+srv://moises:moises@atlascoder.fuen1.mongodb.net/atlasCoder?retryWrites=true&w=majority')
+mongoose.connect(process.env.MONGO_URI,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
 
-mongoose.connection.on("open",()=>{
-    console.log('Base de datos conectada')
-})
-mongoose.connection.on('error',()=>{
-console.error('error al conectar a la base de datos')
-})
- 
+    }, err => {
+        if (err) throw err;
+        console.log('Connected to MongoDB Atlas!!!')
+    });
 class ContenedorMongoDb {
 
     constructor(nombreColeccion, esquema) {
