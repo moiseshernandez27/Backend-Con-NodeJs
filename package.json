@@ -8,15 +8,18 @@
   "description": "",
   "main": "src/main.js",
   "scripts": {
-    "start": "node src/main.js"
+    "start": "node src/main.js",
+    "dev": "nodemon src/main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^11.0.0",
     "express": "^4.17.1",
     "firebase-admin": "^9.11.0",
     "mongodb": "^3.6.11",
-    "mongoose": "^5.13.13"
+    "mongoose": "^5.13.14",
+    "nodemon": "^2.0.15"
   }
 }

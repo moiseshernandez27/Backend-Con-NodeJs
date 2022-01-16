@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 import config from '../config.js'
 import { asPOJO, renameField, removeField } from '../utils/objectUtils.js'
 
-await mongoose.connect(config.mongodb.cnxStr, config.mongodb.options)
+await mongoose.connect('mongodb+srv://moises:moises@atlascoder.fuen1.mongodb.net/atlasCoder?retryWrites=true&w=majority')
 
 mongoose.connection.on("open",()=>{
     console.log('Base de datos conectada')

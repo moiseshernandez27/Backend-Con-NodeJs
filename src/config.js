@@ -1,4 +1,7 @@
 export default {
+    mongoatlas:{
+//Codigo de mongo atlas
+    },
     mongodb: {
         cnxStr: 'mongodb://localhost:27017/cluster0',
         options: {
